@@ -277,42 +277,49 @@ export default function IceBreakerApp() {
       }}
     >
       <div
-        style={{
-          backgroundColor: "white",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-          padding: "1rem",
-          position: "sticky",
-          top: 0,
-          zIndex: 10,
-          display: "flex",
-          gap: "0.5rem",
-          justifyContent: "center"
-        }}
-      >
-        {LIST_KEYS.map((key) => (
-          <button
-            key={key}
-            onClick={(e) => {
-              e.stopPropagation();
-              setActiveKey(key);
-            }}
-            style={{
-              padding: "0.5rem 0.5rem",
-              borderRadius: "0.25rem",
-              border: activeKey === key ? "2px solid #2563eb" : "1px solid #d1d5db",
-              backgroundColor: activeKey === key ? "#2563eb" : "white",
-              color: activeKey === key ? "white" : "#4b5563",
-              cursor: "pointer",
-              fontWeight: 600,
-              fontSize: "0.875rem",
-              userSelect: "none"
-            }}
-            aria-pressed={activeKey === key}
-          >
-            {key}
-          </button>
-        ))}
-      </div>
+  style={{
+    backgroundColor: "white",
+    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+    padding: "1rem",
+    position: "sticky",
+    top: 0,
+    zIndex: 10,
+    display: "flex",
+    flexWrap: "wrap", // <-- add this!
+    gap: "0.5rem",
+    justifyContent: "center"
+  }}
+>
+  {LIST_KEYS.map((key) => (
+    <button
+      key={key}
+      // ...rest is the same
+      style={{
+        padding: "0.5rem 1rem",
+        borderRadius: "0.25rem",
+        border: activeKey === key ? "2px solid #2563eb" : "1px solid #d1d5db",
+        backgroundColor: activeKey === key ? "#2563eb" : "white",
+        color: activeKey === key ? "white" : "#4b5563",
+        cursor: "pointer",
+        fontWeight: 600,
+        fontSize: "1rem",
+        userSelect: "none",
+        flex: "1 1 120px",    // <-- makes buttons shrink/grow
+        minWidth: "110px",    // <-- ensures minimum tap area
+        maxWidth: "180px",    // <-- keeps things readable
+        margin: "0"
+      }}
+      aria-pressed={activeKey === key}
+      onClick={(e) => {
+        e.stopPropagation();
+        setActiveKey(key);
+      }}
+    >
+      {key}
+    </button>
+  ))}
+</div>
+
 
       <main
         style={{
