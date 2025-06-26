@@ -223,7 +223,6 @@ Adjectives: [
   { text: "Callous" }, { text: "Ambivalent" }, { text: "Diligent" }, { text: "Obtrusive" }, { text: "Naive" }
  ],
 
-     Genres: [
 Genres: [
   { text: "Fantasy" }, { text: "Science Fiction" }, { text: "Mystery" }, { text: "Romance" }, { text: "Thriller" },
   { text: "Horror" }, { text: "Comedy" }, { text: "Drama" }, { text: "Action" }, { text: "Adventure" },
