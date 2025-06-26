@@ -44,7 +44,7 @@ export const LISTS = {
   { text: "Labyrinth" }, { text: "Sunset beach" }, { text: "Fortress wall" }, { text: "Boardwalk arcade" },
   { text: "Floating market" }, { text: "Deep forest" }, { text: "Desert fort" }, { text: "River delta" },
   { text: "Crystal cave" }, { text: "Arboretum" }, { text: "Sunken plaza" }, { text: "Rainy rooftop" },
-  { text: "Jungle outpost" }, { text: "Ruined castle" }, { text: "Metro station" }, { text: "City square" }
+  { text: "Jungle outpost" }, { text: "Ruined castle" }, { text: "Metro station" }, { text: "City square" },
   { text: "Mountain meadow" }, { text: "Cliffside path" }, { text: "Coral reef" }, { text: "Hidden glen" },
   { text: "Bamboo grove" }, { text: "Dune sea" }, { text: "Vineyard" }, { text: "Sunset overlook" },
   { text: "Water tower" }, { text: "High-rise office" }, { text: "Science lab" }, { text: "Dockyard" },
