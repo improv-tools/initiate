@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 
 export const LISTS = {
   Locations: [
-    Locations: [
   { text: "Mountain peak" }, { text: "Abandoned warehouse" }, { text: "Space station" }, { text: "Underground bunker" },
   { text: "Rainforest" }, { text: "Crowded marketplace" }, { text: "Ancient temple" }, { text: "Subway station" },
   { text: "Desert oasis" }, { text: "Haunted mansion" }, { text: "Secluded cabin" }, { text: "Pirate ship" },
