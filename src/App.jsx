@@ -286,15 +286,16 @@ export default function IceBreakerApp() {
     top: 0,
     zIndex: 10,
     display: "flex",
-    flexWrap: "wrap", // <-- add this!
+    flexWrap: "wrap",
     gap: "0.5rem",
-    justifyContent: "center"
+    justifyContent: "center",
+    width: "100%",                 // <-- this!
+    boxSizing: "border-box"        // <-- this!
   }}
 >
   {LIST_KEYS.map((key) => (
     <button
       key={key}
-      // ...rest is the same
       style={{
         padding: "0.5rem 1rem",
         borderRadius: "0.25rem",
@@ -305,10 +306,8 @@ export default function IceBreakerApp() {
         fontWeight: 600,
         fontSize: "1rem",
         userSelect: "none",
-        flex: "1 1 120px",    // <-- makes buttons shrink/grow
-        minWidth: "110px",    // <-- ensures minimum tap area
-        maxWidth: "180px",    // <-- keeps things readable
-        margin: "0"
+        minWidth: "120px",          // <-- keep a tap target, but NOT 'flex'
+        margin: 0
       }}
       aria-pressed={activeKey === key}
       onClick={(e) => {
