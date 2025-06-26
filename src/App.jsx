@@ -166,7 +166,35 @@ Adjectives: [
     { text: "Sarcastic" }, { text: "Tactless" }, { text: "Chipper" }, { text: "Peppy" }, { text: "Ecstatic" },
     { text: "Elegant" }, { text: "Hopeful" }, { text: "Flamboyant" }, { text: "Compassionate" }, { text: "Wicked" }
   ],
-    "Other Nouns": [
+    Polysemous: [
+    { text: "Bank" }, { text: "Bark" }, { text: "Bat" }, { text: "Bear" }, { text: "Board" },
+    { text: "Bolt" }, { text: "Can" }, { text: "Case" }, { text: "Charge" }, { text: "Chest" },
+    { text: "Chip" }, { text: "Club" }, { text: "Coach" }, { text: "Clip" }, { text: "Cooler" },
+    { text: "Couch" }, { text: "Crane" }, { text: "Crowd" }, { text: "Current" }, { text: "Date" },
+    { text: "Deck" }, { text: "Dish" }, { text: "Draft" }, { text: "Drill" }, { text: "Duck" },
+    { text: "Fan" }, { text: "Fast" }, { text: "Feather" }, { text: "File" }, { text: "Fine" },
+    { text: "Firm" }, { text: "Fish" }, { text: "Fluke" }, { text: "Fly" }, { text: "Foil" },
+    { text: "Glass" }, { text: "Ground" }, { text: "Gum" }, { text: "Hand" }, { text: "Hatch" },
+    { text: "Head" }, { text: "Horn" }, { text: "Iron" }, { text: "Jack" }, { text: "Jam" },
+    { text: "Kind" }, { text: "Lap" }, { text: "Leaves" }, { text: "Leaf" }, { text: "Letter" },
+    { text: "Light" }, { text: "Line" }, { text: "Log" }, { text: "Match" }, { text: "Mean" },
+    { text: "Mine" }, { text: "Mole" }, { text: "Mug" }, { text: "Nail" }, { text: "Net" },
+    { text: "Order" }, { text: "Pad" }, { text: "Page" }, { text: "Palm" }, { text: "Park" },
+    { text: "Pass" }, { text: "Patch" }, { text: "Pen" }, { text: "Pitch" }, { text: "Pitcher" },
+    { text: "Plain" }, { text: "Plane" }, { text: "Play" }, { text: "Plot" }, { text: "Point" },
+    { text: "Pole" }, { text: "Pool" }, { text: "Port" }, { text: "Post" }, { text: "Pot" },
+    { text: "Present" }, { text: "Press" }, { text: "Punch" }, { text: "Quarry" }, { text: "Race" },
+    { text: "Racket" }, { text: "Range" }, { text: "Right" }, { text: "Ring" }, { text: "Rock" },
+    { text: "Rose" }, { text: "Row" }, { text: "Sail" }, { text: "Saw" }, { text: "Scale" },
+    { text: "Seal" }, { text: "Season" }, { text: "Set" }, { text: "Shower" }, { text: "Sign" },
+    { text: "Sink" }, { text: "Skip" }, { text: "Slip" }, { text: "Spade" }, { text: "Spot" },
+    { text: "Spring" }, { text: "Staff" }, { text: "Stamp" }, { text: "Star" }, { text: "State" },
+    { text: "Stalk" }, { text: "Stick" }, { text: "Stock" }, { text: "Suit" }, { text: "Table" },
+    { text: "Tank" }, { text: "Tap" }, { text: "Tear" }, { text: "Tie" }, { text: "Toast" },
+    { text: "Train" }, { text: "Trunk" }, { text: "Trip" }, { text: "Watch" }, { text: "Wave" },
+    { text: "Well" }, { text: "Whip" }, { text: "Yard" }
+  ],
+    "More Nouns": [
     { text: "Umbrella" }, { text: "Lantern" }, { text: "Treasure map" }, { text: "Compass" }, { text: "Backpack" },
     { text: "Robot" }, { text: "Key" }, { text: "Mask" }, { text: "Bicycle" }, { text: "Book" },
     { text: "Clock" }, { text: "Sword" }, { text: "Mirror" }, { text: "Crystal ball" }, { text: "Potion" },
@@ -198,35 +226,8 @@ Adjectives: [
     { text: "Bin" }, { text: "Calendar" }, { text: "Backpack" }, { text: "Headphones" }, { text: "Leaf" },
     { text: "Crayon" }, { text: "Glove" }, { text: "Lockbox" }, { text: "Keychain" }, { text: "Trinket" },
     { text: "Pinwheel" }, { text: "String" }, { text: "Chalk" }, { text: "Laptop" }, { text: "Umbrella" }
-  ],
-    Polysemous: [
-    { text: "Bank" }, { text: "Bark" }, { text: "Bat" }, { text: "Bear" }, { text: "Board" },
-    { text: "Bolt" }, { text: "Can" }, { text: "Case" }, { text: "Charge" }, { text: "Chest" },
-    { text: "Chip" }, { text: "Club" }, { text: "Coach" }, { text: "Clip" }, { text: "Cooler" },
-    { text: "Couch" }, { text: "Crane" }, { text: "Crowd" }, { text: "Current" }, { text: "Date" },
-    { text: "Deck" }, { text: "Dish" }, { text: "Draft" }, { text: "Drill" }, { text: "Duck" },
-    { text: "Fan" }, { text: "Fast" }, { text: "Feather" }, { text: "File" }, { text: "Fine" },
-    { text: "Firm" }, { text: "Fish" }, { text: "Fluke" }, { text: "Fly" }, { text: "Foil" },
-    { text: "Glass" }, { text: "Ground" }, { text: "Gum" }, { text: "Hand" }, { text: "Hatch" },
-    { text: "Head" }, { text: "Horn" }, { text: "Iron" }, { text: "Jack" }, { text: "Jam" },
-    { text: "Kind" }, { text: "Lap" }, { text: "Leaves" }, { text: "Leaf" }, { text: "Letter" },
-    { text: "Light" }, { text: "Line" }, { text: "Log" }, { text: "Match" }, { text: "Mean" },
-    { text: "Mine" }, { text: "Mole" }, { text: "Mug" }, { text: "Nail" }, { text: "Net" },
-    { text: "Order" }, { text: "Pad" }, { text: "Page" }, { text: "Palm" }, { text: "Park" },
-    { text: "Pass" }, { text: "Patch" }, { text: "Pen" }, { text: "Pitch" }, { text: "Pitcher" },
-    { text: "Plain" }, { text: "Plane" }, { text: "Play" }, { text: "Plot" }, { text: "Point" },
-    { text: "Pole" }, { text: "Pool" }, { text: "Port" }, { text: "Post" }, { text: "Pot" },
-    { text: "Present" }, { text: "Press" }, { text: "Punch" }, { text: "Quarry" }, { text: "Race" },
-    { text: "Racket" }, { text: "Range" }, { text: "Right" }, { text: "Ring" }, { text: "Rock" },
-    { text: "Rose" }, { text: "Row" }, { text: "Sail" }, { text: "Saw" }, { text: "Scale" },
-    { text: "Seal" }, { text: "Season" }, { text: "Set" }, { text: "Shower" }, { text: "Sign" },
-    { text: "Sink" }, { text: "Skip" }, { text: "Slip" }, { text: "Spade" }, { text: "Spot" },
-    { text: "Spring" }, { text: "Staff" }, { text: "Stamp" }, { text: "Star" }, { text: "State" },
-    { text: "Stalk" }, { text: "Stick" }, { text: "Stock" }, { text: "Suit" }, { text: "Table" },
-    { text: "Tank" }, { text: "Tap" }, { text: "Tear" }, { text: "Tie" }, { text: "Toast" },
-    { text: "Train" }, { text: "Trunk" }, { text: "Trip" }, { text: "Watch" }, { text: "Wave" },
-    { text: "Well" }, { text: "Whip" }, { text: "Yard" }
   ]
+
 }
 
 // =======================================================
