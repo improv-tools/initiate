@@ -93,8 +93,6 @@ export const LISTS = {
   { text: "Tropical lagoon" }, { text: "Sky lounge" }, { text: "Deep jungle" }, { text: "Observation post" },
   { text: "Marsh boardwalk" }, { text: "Farmers market" }, { text: "Water purification plant" }, { text: "Sunken plaza" }
 
-]
-
   ],
    Occupations: [
      { text: "Firefighter" }, { text: "Teacher" }, { text: "Detective" }, { text: "Chef" }, { text: "Astronaut" },
