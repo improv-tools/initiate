@@ -717,7 +717,7 @@ style={{
         flexDirection: "column",
         backgroundColor: "#f3f4f6",
 	boxSizing: "border-box",
-	outline: "none"
+	outline: "none",
       }}
     >
       <div
