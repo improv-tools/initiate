@@ -161,8 +161,94 @@ export const LISTS = {
   { text: "Carnival game operator" }, { text: "Ski instructor" }, { text: "Candle maker" }, { text: "Surf instructor" },
   { text: "Field archaeologist" }, { text: "Radio producer" }, { text: "Wine taster" }, { text: "Festival organizer" },
   { text: "Fantasy map artist" }, { text: "Cartography assistant" }, { text: "Vintage shop owner" }, { text: "Acrobatics coach" },
-  { text: "Skateboard designer" }, { text: "Street magician" }, { text: "Escape room host" }, { text: "Museum exhibit designer" }
-
+  { text: "Skateboard designer" }, { text: "Street magician" }, { text: "Escape room host" }, { text: "Museum exhibit designer" },
+      { text: "Animal keeper" },  { text: "Sex worker" },  { text: "Pimp" }, { text: "Pornstar" },
+  { text: "Barkeeper" },
+  { text: "Beautician" },
+  { text: "Bee-keeper" },
+  { text: "Bicycle messenger" },
+  { text: "Bookseller" },
+  { text: "Boxer" },
+  { text: "Bricklayer" },
+  { text: "Call-centre agent" },
+  { text: "Cameraman" }, // or "Camerawoman"
+  { text: "Captain" },
+  { text: "Cemetery gardener" },
+  { text: "Chancellor" },
+  { text: "Chemist" },
+  { text: "Chimney sweep" },
+  { text: "Chorister" },
+  { text: "Circus artist" },
+  { text: "Equilibrist" },
+  { text: "Coder" },
+  { text: "Comedy author" },
+  { text: "Computer scientist" },
+  { text: "Concrete worker" },
+  { text: "Creative director" },
+  { text: "Diet counsellor" },
+  { text: "Doorkeeper" },
+  { text: "Dressmaker" },
+  { text: "Driving instructor" },
+  { text: "Educator" },
+  { text: "Energy consultant" },
+  { text: "Estate agent" },
+  { text: "Goldsmith" },
+  { text: "Headhunter" },
+  { text: "Domestic Engineer" },
+  { text: "Human resources manager" },
+  { text: "Hunter" },
+  { text: "Interior designer" },
+  { text: "Jazz musician" },
+  { text: "Legal expert" },
+  { text: "Mail carrier" },
+  { text: "Market researcher" },
+  { text: "Marriage counsellor" },
+  { text: "Masseur" },
+  { text: "Minister of defense" },
+  { text: "Model" },
+  { text: "Mountaineer" },
+  { text: "Music teacher" },
+  { text: "Obstetrician" },
+  { text: "Pathologist" },
+  { text: "Physician" },
+  { text: "Physicist" },
+  { text: "Piano maker" },
+  { text: "Priest" },
+  { text: "Prompter" },
+  { text: "Psephologist" },
+  { text: "Roofer" },
+  { text: "Santa" },
+  { text: "Shepherd" },
+  { text: "Shipbuilder" },
+  { text: "Soccer referee" },
+  { text: "Speechwriter" },
+  { text: "Sports instructor" },
+  { text: "Stonemason" },
+  { text: "Stuntman" },
+  { text: "Swimming pool attendant" },
+  { text: "Track welder" },
+  { text: "Train driver" },
+  { text: "Violin-maker" },
+  { text: "Watchmaker" },
+  { text: "Filer" },
+  { text: "Dry cleaner" },
+  { text: "Lamp lighter" },
+  { text: "Bathroom attendant" },
+  { text: "Recorder player" },
+  { text: "Driller" },
+  { text: "Sweeper" },
+  { text: "Photocopier technician" },
+  { text: "Tree cutter" },
+  { text: "Roofer" },
+  { text: "Dictator" }, 
+  { text: "Conductor" },
+  { text: "Printer" },
+  { text: "Grape harvester" },
+  { text: "Assembly line worker" },
+  { text: "Ploughman" },
+  { text: "Preacher" },           
+  { text: "Plasterer" },
+  { text: "Lecturer" },
  ],
 
 Adjectives: [
@@ -275,7 +361,19 @@ Genres: [
   { text: "Episodic Anthology" }, { text: "Serial Drama" }, { text: "Soap" }, { text: "Daytime Drama" }, { text: "Late Night Show" },
   { text: "Talk Show" }, { text: "Morning Show" }, { text: "Panel Comedy" }, { text: "Debate Show" }, { text: "Docuseries" },
   { text: "News Magazine" }, { text: "Satirical News Show" }, { text: "Political Talk Show" }, { text: "DIY Show" }, { text: "Home Renovation Show" },
-  { text: "Travelogue Series" }, { text: "Food Documentary" }, { text: "Cooking Series" }, { text: "Baking Show" }, { text: "Gardening Show" }
+  { text: "Travelogue Series" }, { text: "Food Documentary" }, { text: "Cooking Series" }, { text: "Baking Show" }, { text: "Gardening Show" },
+  { text: "Traffic News" },
+  { text: "Docu-soap" },
+  { text: "Church Service / Televangelist" },
+  { text: "Eurovision Contest" },
+  { text: "Music Chart Show" },
+  { text: "Infotainment" },
+  { text: "Antiques Advice Show" },
+  { text: "Open University" },
+  { text: "TV Shopping (Infomercial)" },
+  { text: "Election Studio" },
+  { text: "Party Political Broadcast" },
+  { text: "Weather Report" },
 ],
     Polysemous: [
    { text: "Bank" }, { text: "Bark" }, { text: "Bat" }, { text: "Bear" }, { text: "Board" },
@@ -337,7 +435,13 @@ Genres: [
   { text: "Base" }, { text: "Tie" }, { text: "Lap" }, { text: "Coast" }, { text: "Snap" },
   { text: "Seal" }, { text: "Roll" }, { text: "Deck" }, { text: "Panel" }, { text: "Bunk" },
   { text: "Coast" }, { text: "Belt" }, { text: "Foil" }, { text: "Bore" }, { text: "Club" },
-  { text: "Pit" }, { text: "Mint" }, { text: "Panel" }, { text: "Pad" }, { text: "Pump" }
+  { text: "Pit" }, { text: "Mint" }, { text: "Panel" }, { text: "Pad" }, { text: "Pump" },
+      { text: "Rinse" },
+  { text: "Printer" },
+  { text: "Brush" },
+  { text: "Mow" },
+  { text: "Cut" },
+  { text: "Check" }
 
   ],
     "More Nouns": [
@@ -451,8 +555,119 @@ Genres: [
   { text: "Parachute" }, { text: "Toy submarine" }, { text: "Easel" }, { text: "Plush dinosaur" }, { text: "Fortune wheel" },
   { text: "Skateboard ramp" }, { text: "Graffiti wall" }, { text: "Holographic card" }, { text: "Magic door" }, { text: "Pinata" }
 
-  ]
-
+  ],
+Warmups : [
+  {
+    text: "Five Things",
+    description: "Name a category, quickly list five things in it. After each, group chants the number (“One!” “Two!” etc.), then all chant “Those are five things!” at the end.",
+    labels: ["Spontaneity", "Harmony"]
+  },
+  {
+    text: "Categories",
+    description: "Pick a category; go around naming items once; label the round.",
+    labels: ["Spontaneity", "Listening"]
+  },
+  {
+    text: "Sensei",
+    description: "Two face off, bow, silently mirror arms (up/down/out); sync ends round. Bow again.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "Whisky Mixer",
+    description: "Say “Whisky Mixer” (left), “Misty Vista” (right), or “Mr Whiskers” (to anyone). Pass fast.",
+    labels: ["Listening", "Spontaneity"]
+  },
+  {
+    text: "Mind Meld",
+    description: "On a three-count group chant, two say words together; try to converge on the same word by repeating with new partners.",
+    labels: ["Spontaneity", "Harmony"]
+  },
+  {
+    text: "Gift Giving",
+    description: "Mime giving a gift; receiver accepts/justifies what it is.",
+    labels: ["Spontaneity", "Harmony"]
+  },
+  {
+    text: "Eyes Closed Counting",
+    description: "Group counts up, eyes closed—restart if two speak at once.",
+    labels: ["Listening", "Harmony"]
+  },
+  {
+    text: "Name Game",
+    description: "Say name with a gesture; group repeats. Pass around circle.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "Zip Zap Zop",
+    description: "Say “Zip,” “Zap,” or “Zop” to anyone; keep the rhythm, no mistakes.",
+    labels: ["Listening", "Harmony"]
+  },
+  {
+    text: "Pass the Clap",
+    description: "Pass a synchronized clap around the circle quickly and precisely.",
+    labels: ["Listening", "Harmony"]
+  },
+  {
+    text: "One Word Story",
+    description: "Tell a story, one word at a time per person.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "Machines",
+    description: "Each steps in, adds a repeating sound/movement to build a group machine.",
+    labels: ["Harmony", "Spontaneity"]
+  },
+  {
+    text: "Yes, Let's!",
+    description: "Someone shouts “Let’s X!”; all do it. New leader suggests next.",
+    labels: ["Harmony", "Spontaneity"]
+  },
+  {
+    text: "Three Word Chant",
+    description: "Three people, one word each; form a phrase. Group chants it 3 times. Shift trio; repeat.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "John the Loquacious Gardener",
+    description: "Three give name, location, occupation; fourth does a short scene as that character. Rotate roles.",
+    labels: ["Spontaneity", "Harmony"]
+  },
+  {
+    text: "Sound Ball",
+    description: "Make a sound and toss an imaginary ball; receiver matches it, then creates and sends a new sound.",
+    labels: ["Listening", "Spontaneity"]
+  },
+  {
+    text: "Alphabet Game",
+    description: "Two play a scene; each line starts with the next letter of the alphabet.",
+    labels: ["Spontaneity", "Listening"]
+  },
+  {
+    text: "Freeze Tag",
+    description: "Two act a scene. Anyone can yell “freeze,” tag out a player, take their pose, start new scene.",
+    labels: ["Spontaneity", "Harmony"]
+  },
+  {
+    text: "Statue Tag",
+    description: "Two create a frozen pose. One watcher labels the tableau, another tags out the longest-standing player and takes their pose. Tableau continues with new label.",
+    labels: ["Harmony", "Spontaneity"]
+  },
+  {
+    text: "Bunny Bunny",
+    description: "In a circle, “bunny” puts hands on head (bunny ears), faces next, both say “bunny bunny” in sync (sending & receiving); neighbors do “tikky tokky”—forearms up, elbows in, bounce side to side with legs apart. Receiver becomes bunny. Four “bunny bunny”s per pass.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "Energy Circle",
+    description: "One person does a sound/movement; next person matches it, then creates and passes a new one down the circle. Continues around.",
+    labels: ["Harmony", "Listening"]
+  },
+  {
+    text: "Follow the Follower",
+    description: "Circle. Everyone copies a movement; anyone can change the movement at any time. No fixed leader—spontaneous changes.",
+    labels: ["Harmony", "Listening"]
+  }
+]
 }
 
 // =======================================================
@@ -496,7 +711,8 @@ export default function IceBreakerApp() {
         if (e.key === "Enter" || e.key === " ") handleClick();
       }}
       style={{
-        minHeight: "100vh",
+        height: "100dvh",           // Modern fix
+        minHeight: "100svh",        // Fallback for mobile
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#f3f4f6"
@@ -547,44 +763,91 @@ export default function IceBreakerApp() {
 
 
       <main
-        style={{
-          flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "1.5rem",
-          textAlign: "center",
-          userSelect: "none"
-        }}
-      >
-        {currentPrompt ? (
-          <>
-            <h1 style={{ fontSize: "2rem", fontWeight: "600", color: "#1f2937", maxWidth: "40rem" }}>
-              {currentPrompt.text}
-            </h1>
-            <p
+  style={{
+    flexGrow: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "1.5rem",
+    textAlign: "center",
+    userSelect: "none"
+  }}
+>
+  {currentPrompt ? (
+    <>
+      <h1 style={{ fontSize: "2rem", fontWeight: "600", color: "#1f2937", maxWidth: "40rem" }}>
+        {currentPrompt.text}
+      </h1>
+      {/* Description, if any */}
+      {currentPrompt.description && (
+        <p
+          style={{
+            marginTop: "0.5rem",
+            fontSize: "1rem",
+            color: "#6b7280",
+            maxWidth: "34rem",
+            fontStyle: "italic",
+            fontWeight: 400,
+          }}
+        >
+          {currentPrompt.description}
+        </p>
+      )}
+      {/* Labels, if any */}
+      {currentPrompt.labels && currentPrompt.labels.length > 0 && (
+        <div
+          style={{
+            display: "flex",
+            gap: "0.5rem",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginTop: "0.5rem",
+            marginBottom: "0.25rem"
+          }}
+        >
+          {currentPrompt.labels.map((label) => (
+            <span
+              key={label}
               style={{
-                marginTop: "1rem",
-                textTransform: "uppercase",
-                fontWeight: "700",
-                letterSpacing: "0.05em",
-                color: "#6b7280",
-                fontSize: "1rem"
+                background: "#e0e7ff",
+                color: "#3730a3",
+                borderRadius: "999px",
+                padding: "0.2em 0.9em",
+                fontSize: "0.85em",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
+                userSelect: "text",
+                boxShadow: "0 1px 2px rgba(56,78,255,0.06)"
               }}
             >
-              {activeKey}
-            </p>
-            <p style={{ marginTop: "0.5rem", fontSize: "0.75rem", color: "#9ca3af", userSelect: "text" }}>
-              (Click anywhere or press Enter/Space to see another prompt)
-            </p>
-          </>
-        ) : (
-          <p style={{ color: "#6b7280", marginTop: "1.5rem", userSelect: "text" }}>
-            No prompts available for this category.
-          </p>
-        )}
-      </main>
+              {label}
+            </span>
+          ))}
+        </div>
+      )}
+      <p
+        style={{
+          marginTop: "1rem",
+          textTransform: "uppercase",
+          fontWeight: "700",
+          letterSpacing: "0.05em",
+          color: "#6b7280",
+          fontSize: "1rem"
+        }}
+      >
+        {activeKey}
+      </p>
+      <p style={{ marginTop: "0.5rem", fontSize: "0.75rem", color: "#9ca3af", userSelect: "text" }}>
+        (Click anywhere or press Enter/Space to see another prompt)
+      </p>
+    </>
+  ) : (
+    <p style={{ color: "#6b7280", marginTop: "1.5rem", userSelect: "text" }}>
+      No prompts available for this category.
+    </p>
+  )}
+</main>
     </div>
   );
 }
