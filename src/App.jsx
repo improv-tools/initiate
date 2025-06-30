@@ -648,7 +648,7 @@ description: "Two act a scene. Anyone can yell “freeze,” tag out a player, t
 labels: ["Spontaneity", "Harmony"]
 },
 {
-text: "Statue Tag",
+text: "Statue",
 description: "Two create a frozen pose. One watcher labels the tableau, another tags out the longest-standing player and takes their pose. Tableau continues with new label.",
 labels: ["Harmony", "Spontaneity"]
 },
@@ -666,6 +666,17 @@ labels: ["Harmony", "Listening"]
 text: "Follow the Follower",
 description: "Circle. Everyone copies a movement; anyone can change the movement at any time. No fixed leader—spontaneous changes.",
 labels: ["Harmony", "Listening"]
+},
+{
+  text: "I Need A",
+  description: "Walk to someone, say “I need a [thing]” three times (different each time), take their place. They start next, using your last thing as their first.",
+  labels: ["Spontaneity", "Listening"]
+},
+	{
+  text: "Category Circle",
+  description:
+    "All raise arms. Starter says a category item, points to another raised arm, and lowers theirs. Continue till back to starter. Repeat the order; add more chains.",
+  labels: ["Listening", "Harmony", "Memory"]
 }
 ]
 }
