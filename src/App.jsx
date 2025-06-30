@@ -596,7 +596,7 @@ Polysemous: [
     },
     {
       text: "Bunny Bunny",
-      description: "In a circle, “bunny” puts hands on head (bunny ears), faces next, both say “bunny bunny” in sync (sending & receiving); neighbours do “tikky tokky”—forearms up, elbows in, bounce side to side with legs apart. Receiver becomes bunny. Four “bunny bunny”s per pass.",
+      description: "In a circle, “bunny” puts hands on head (bunny ears), faces next, both say “bunny bunny” in sync (sending & receiving); neighbours do “tikky tokky”—forearms up, elbows in, bounce side to side with legs apart. Receiver becomes bunny.",
       labels: ["Harmony", "Listening"]
     },
     {
