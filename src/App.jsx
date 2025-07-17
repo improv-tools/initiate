@@ -1795,7 +1795,7 @@ Polysemous : [
 
 const LIST_KEYS = Object.keys(LISTS);
 
-export default function App() {
+export function App() {
   const [activeKey, setActiveKey] = useState(LIST_KEYS[0]);
   const [currentPrompt, setCurrentPrompt] = useState(null);
   const [showDefinition, setShowDefinition] = useState(false);
@@ -1838,6 +1838,7 @@ export default function App() {
         flexDirection: "column",
         backgroundColor: "#000000",
         color: "#ffffff",
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         boxSizing: "border-box",
         outline: "none",
       }}
@@ -1871,6 +1872,7 @@ export default function App() {
               fontSize: "0.95rem",
               userSelect: "none",
               transition: "background-color 0.2s, color 0.2s",
+              fontFamily: "inherit",
             }}
             aria-pressed={activeKey === key}
             onClick={(e) => {
@@ -1915,7 +1917,7 @@ export default function App() {
                       setShowDefinition(!showDefinition);
                     }}
                     style={{
-                      fontSize: "1.3rem",
+                      fontSize: "1rem",
                       color: "#cccccc",
                       cursor: "pointer",
                       marginLeft: "0.5rem",
@@ -1982,6 +1984,7 @@ export default function App() {
                         letterSpacing: "0.04em",
                         userSelect: "text",
                         boxShadow: "0 1px 2px rgba(255,255,255,0.1)",
+                        fontFamily: "inherit",
                       }}
                     >
                       {label}
@@ -2011,3 +2014,4 @@ export default function App() {
     </div>
   );
 }
+
