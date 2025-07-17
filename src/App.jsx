@@ -1789,8 +1789,130 @@ Polysemous : [
   { "text": "Holographic card", "definition": "A card with a shiny, rainbow-like image that changes in the light." },
   { "text": "Magic door", "definition": "A door that leads to a magical or mysterious place in stories." },
   { "text": "Pinata", "definition": "A decorated container filled with treats, broken open at parties." }
-
-]
+],
+   Warmups: [
+    {
+      text: "Five Things",
+      description: "Name a category, quickly list five things in it. After each, group chants the number (“One!” “Two!” etc.), then all chant “Those are five things!” at the end.",
+      labels: ["Spontaneity", "Harmony"]
+    },
+    {
+      text: "Categories",
+      description: "Pick a category; go round naming items once; label the round.",
+      labels: ["Spontaneity", "Listening"]
+    },
+    {
+      text: "Sensei",
+      description: "Two face off, bow, silently mirror arms (up/down/out); sync ends round. Bow again.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "Whisky Mixer",
+      description: "Say “Whisky Mixer” (left), “Misty Vista” (right), or “Mr Whiskers” (to anyone). Pass fast.",
+      labels: ["Listening", "Spontaneity"]
+    },
+    {
+      text: "Mind Meld",
+      description: "On a three-count group chant, two say words together; try to converge on the same word by repeating with new partners.",
+      labels: ["Spontaneity", "Harmony"]
+    },
+    {
+      text: "Gift Giving",
+      description: "Mime giving a present; receiver accepts/justifies what it is.",
+      labels: ["Spontaneity", "Harmony"]
+    },
+    {
+      text: "Eyes Closed Counting",
+      description: "Group counts up, eyes closed—restart if two speak at once.",
+      labels: ["Listening", "Harmony"]
+    },
+    {
+      text: "Name Game",
+      description: "Say name with a gesture; group repeats. Pass round the circle.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "Zip Zap Zop",
+      description: "Say “Zip,” “Zap,” or “Zop” to anyone; keep the rhythm, no mistakes.",
+      labels: ["Listening", "Harmony"]
+    },
+    {
+      text: "Pass the Clap",
+      description: "Pass a synchronised clap round the circle quickly and precisely.",
+      labels: ["Listening", "Harmony"]
+    },
+    {
+      text: "One Word Story",
+      description: "Tell a story, one word at a time per person.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "Machines",
+      description: "Each steps in, adds a repeating sound/movement to build a group machine.",
+      labels: ["Harmony", "Spontaneity"]
+    },
+    {
+      text: "Yes, Let's!",
+      description: "Someone shouts “Let’s X!”; all do it. New leader suggests next.",
+      labels: ["Harmony", "Spontaneity"]
+    },
+    {
+      text: "Three Word Chant",
+      description: "Three people, one word each; form a phrase. Group chants it 3 times. Shift trio; repeat.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "John the Loquacious Gardener",
+      description: "Three give name, location, occupation; fourth does a short scene as that character. Rotate roles.",
+      labels: ["Spontaneity", "Harmony"]
+    },
+    {
+      text: "Sound Ball",
+      description: "Make a sound and toss an imaginary ball; receiver matches it, then creates and sends a new sound.",
+      labels: ["Listening", "Spontaneity"]
+    },
+    {
+      text: "Alphabet Game",
+      description: "Two play a scene; each line starts with the next letter of the alphabet.",
+      labels: ["Spontaneity", "Listening"]
+    },
+    {
+      text: "Freeze Tag",
+      description: "Two act a scene. Anyone can yell “freeze,” tag out a player, take their pose, start new scene.",
+      labels: ["Spontaneity", "Harmony"]
+    },
+    {
+      text: "Statue",
+      description: "Two create a frozen pose. One watcher labels the tableau, another tags out the longest-standing player and takes their pose. Tableau continues with new label.",
+      labels: ["Harmony", "Spontaneity"]
+    },
+    {
+      text: "Bunny Bunny",
+      description: "In a circle, “bunny” puts hands on head (bunny ears), faces next, both say “bunny bunny” in sync (sending & receiving); neighbours do “tikky tokky”—forearms up, elbows in, bounce side to side with legs apart. Receiver becomes bunny.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "Energy Circle",
+      description: "One person does a sound/movement; next person matches it, then creates and passes a new one round the circle. Continues round.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "Follow the Follower",
+      description: "Circle. Everyone copies a movement; anyone can change the movement at any time. No fixed leader—spontaneous changes.",
+      labels: ["Harmony", "Listening"]
+    },
+    {
+      text: "I Need A",
+      description: "Walk to someone, say “I need a [thing]” three times (different each time), take their place. They start next, using your last thing as their first.",
+      labels: ["Spontaneity", "Listening"]
+    },
+    {
+      text: "Category Circle",
+      description:
+        "All raise arms. Starter says a category item, points to another raised arm, and lowers theirs. Continue till back to starter. Repeat the order; add more chains.",
+      labels: ["Listening", "Harmony", "Memory"]
+    }
+  ]
 };
 
 const LIST_KEYS = Object.keys(LISTS);
