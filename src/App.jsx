@@ -1795,7 +1795,7 @@ Polysemous : [
 
 const LIST_KEYS = Object.keys(LISTS);
 
-export function App() {
+export default function App() {
   const [activeKey, setActiveKey] = useState(LIST_KEYS[0]);
   const [currentPrompt, setCurrentPrompt] = useState(null);
   const [showDefinition, setShowDefinition] = useState(false);
