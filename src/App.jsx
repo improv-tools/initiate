@@ -1790,6 +1790,36 @@ Polysemous : [
   { "text": "Magic door", "definition": "A door that leads to a magical or mysterious place in stories." },
   { "text": "Pinata", "definition": "A decorated container filled with treats, broken open at parties." }
 ],
+  Affirmations: 
+[
+  { "text": "Gift your scene partner with the funny.", "labels": ["Teamwork"] },
+  { "text": "Who, what, where?", "labels": ["Initiation"] },
+  { "text": "Do not forget spacework.", "labels": ["Scenework"] },
+  { "text": "Commit as if it's a written play.", "labels": ["Scenework"] },
+  { "text": "Top of your intelligence.", "labels": ["Game"] },
+  { "text": "Distill for the game.", "labels": ["Game"] },
+  { "text": "Initially, stay close to the monologue.", "labels": ["Initiation"] },
+  { "text": "Tag judiciously. Do you need it?", "labels": ["Teamwork"] },
+  { "text": "Consciously choose your character.", "labels": ["Initiation"] },
+  { "text": "Backline moves to support their idea.", "labels": ["Teamwork"] },
+  { "text": "Speak clearly.", "labels": ["Scenework"] },
+  { "text": "Don't stand with your back to the audience.", "labels": ["Scenework"] },
+  { "text": "Pick your LMA: Direct or Indirect, Sudden or Sustained, Light or Strong, Bound or Free.", "labels": ["Initiation"] },
+  { "text": "Call out what your character sees as weird.", "labels": ["Game"] },
+  { "text": "Scene going badly? Make choices, call it out, explain, heighten.", "labels": ["Scenework"] },
+  { "text": "If in doubt, fill with real you, and replace with new information as the scene develops.", "labels": ["Scenework"] },
+  { "text": "Don't get stuck in arguments — if stuck, concede.", "labels": ["Teamwork"] },
+  { "text": "Avoid opening with a problem.", "labels": ["Initiation"] },
+  { "text": "Don't deflect the initiator’s energy with a contrasting move.", "labels": ["Teamwork"] },
+  { "text": "Don't be precious with your choices.", "labels": ["Game"] },
+  { "text": "Don't be a prisoner to the game — explore the world you made.", "labels": ["Game"] },
+  { "text": "Scene going badly? Make confident choices. Guide your partner.", "labels": ["Teamwork"] },
+  { "text": "Alternate heightening and lateral exploration of the scene.", "labels": ["Game"] },
+  { "text": "'Yes, and' past statements — history is fixed, don’t contest it.", "labels": ["Game"] },
+  { "text": "Big characters: cartoon, emotion, mood.", "labels": ["Initiation"] },
+  { "text": "Don't escape character.", "labels": ["Scenework"] }
+],
+    
    Warmups: [
     {
       text: "Five Things",
