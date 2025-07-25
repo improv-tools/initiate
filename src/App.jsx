@@ -1868,7 +1868,7 @@ Polysemous : [
     },
     {
       text: "Pass the Clap",
-      description: "Pass a synchronised clap round the circle quickly and precisely.",
+      description: "Pass a synchronised clap round the circle quickly and precisely. Upgrade to eye contact only.",
       labels: ["Listening", "Harmony"]
     },
     {
@@ -1941,7 +1941,24 @@ Polysemous : [
       description:
         "All raise arms. Starter says a category item, points to another raised arm, and lowers theirs. Continue till back to starter. Repeat the order; add more chains.",
       labels: ["Listening", "Harmony", "Memory"]
-    }
+    },
+  {
+  text: "Around the World",
+  description:
+    "Pass a sound and/or gesture around the circle by mimicking only the person before you. See how it evolves by the time it returns to the start.",
+  labels: ["Listening", "Mimicry", "Observation"]
+  },
+     {
+  text: "Zoom Schwartz Profigliano",
+  description:
+    "Players pass focus using 'zoom' (to anyone not beside you) and 'profigliano' (to either neighbor). Say 'schwartz' to block a pass. Stay alert or you're out!",
+  labels: ["Focus", "Listening", "Reaction"]
+},
+     {
+  text: "Pattern Game (Word Ball)",
+  description: "In a circle, point to someone and say a word; they point to another with a related word, until all are included. Repeat the same order faster. Add new patterns and try running multiple sequences at once.",
+  labels: ["Focus", "Listening", "Ensemble"]
+}
   ]
 };
 
