@@ -1,69 +1,101 @@
 import React, { useState, useEffect, useRef } from "react";
-import { prompts, categories, levels } from "./prompts";
+import LISTS from "./lists";
+
+const TITLE_KEY = "__TITLE__";
+const LIST_KEYS = [...Object.keys(LISTS), TITLE_KEY];
+
+const TITLE_PATTERNS = [
+  // Single noun
+  ({ noun }) => `The ${noun}`,
+
+  // Adjective + noun
+  ({ adj, noun }) => `The ${adj} ${noun}`,
+
+  // Two nouns
+  ({ noun1, noun2 }) => `The ${noun1} of the ${noun2}`,
+
+  // Adjective + noun of noun
+  ({ adj, noun1, noun2 }) => `The ${adj} ${noun1} of the ${noun2}`,
+
+  // Noun of adjective noun
+  ({ noun1, adj, noun2 }) => `The ${noun1} of the ${adj} ${noun2}`,
+
+  // Adjective noun in/of location
+  ({ adj, noun, location }) => `The ${adj} ${noun} in the ${location}`,
+  ({ adj, noun, location }) => `The ${adj} ${noun} of ${location}`,
+
+  // Two adjectives
+  ({ adj1, adj2, noun }) => `The ${adj1} and ${adj2} ${noun}`,
+  ({ adj1, adj2, noun1, noun2 }) => `The ${adj1} ${noun1} of the ${adj2} ${noun2}`,
+  ({ adj1, adj2, noun, location }) => `The ${adj1} and ${adj2} ${noun} of ${location}`,
+
+  // Genre or location focused
+  ({ genre, location }) => `A ${genre} in ${location}`,
+  ({ noun, location }) => `The ${noun} in the ${location}`,
+  ({ noun, location }) => `The ${noun} of ${location}`,
+
+  // Plural pairings
+  ({ noun1, noun2 }) => `${noun1}s and ${noun2}s`,
+  ({ adj, noun1, noun2 }) => `The ${adj} ${noun1}s and ${noun2}s`,
+  ({ adj, noun1, noun2 }) => `${noun1}s and the ${adj} ${noun2}`,
+];
+
+function generateStoryTitle() {
+  const adjectiveList = LISTS["Adjectives"] || [];
+  const nounList = [
+    ...(LISTS["More Nouns"] || []),
+    ...(LISTS["Polysenous"] || []),
+  ];
+  const locationList = LISTS["Locations"] || [];
+  const genreList = LISTS["Genres"] || [];
+
+  const adj = adjectiveList.length > 0 ? randomText(adjectiveList) : "";
+  const adj1 = adjectiveList.length > 0 ? randomText(adjectiveList) : "";
+  const adj2 = adjectiveList.length > 0 ? randomText(adjectiveList) : "";
+
+  const noun = nounList.length > 0 ? randomText(nounList) : "";
+  const noun1 = nounList.length > 0 ? randomText(nounList) : "";
+  const noun2 = nounList.length > 0 ? randomText(nounList) : "";
+
+  const location = locationList.length > 0 ? randomText(locationList) : "";
+  const genre = genreList.length > 0 ? randomText(genreList) : "";
+
+  const pattern = TITLE_PATTERNS[Math.floor(Math.random() * TITLE_PATTERNS.length)];
+  return { text: pattern({ adj, adj1, adj2, noun, noun1, noun2, location, genre }) };
+}
+
+function randomText(list) {
+  return list[Math.floor(Math.random() * list.length)].text;
+}
 
 export default function App() {
-  const [activeCombos, setActiveCombos] = useState(
-    new Set(categories.flatMap((cat) => levels.map((lvl) => `${cat}:${lvl}`)))
-  );
+  const [activeKey, setActiveKey] = useState(LIST_KEYS[0]);
   const [currentPrompt, setCurrentPrompt] = useState(null);
+  const [showDefinition, setShowDefinition] = useState(false);
+
   const containerRef = useRef(null);
 
   useEffect(() => {
     if (containerRef.current) containerRef.current.focus();
   }, []);
 
-  const getFilteredPrompts = () =>
-    prompts.filter((p) => activeCombos.has(`${p.category}:${p.level}`));
-
   const getRandomPrompt = () => {
-    const filtered = getFilteredPrompts();
-    if (filtered.length === 0) return null;
-    return filtered[Math.floor(Math.random() * filtered.length)];
+    if (activeKey === TITLE_KEY) {
+      return generateStoryTitle();
+    }
+    const list = LISTS[activeKey];
+    if (!list || list.length === 0) return null;
+    return list[Math.floor(Math.random() * list.length)];
   };
 
   useEffect(() => {
     setCurrentPrompt(getRandomPrompt());
-  }, []);
+    setShowDefinition(false);
+  }, [activeKey]);
 
   const handleClick = () => {
     setCurrentPrompt(getRandomPrompt());
-  };
-
-  const toggleCombo = (cat, lvl) => {
-    const key = `${cat}:${lvl}`;
-    const newSet = new Set(activeCombos);
-    if (newSet.has(key)) newSet.delete(key);
-    else newSet.add(key);
-    setActiveCombos(newSet);
-
-    const filtered = prompts.filter((p) => newSet.has(`${p.category}:${p.level}`));
-    setCurrentPrompt(filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : null);
-  };
-
-  const toggleEntireLevel = (lvl) => {
-    const newSet = new Set(activeCombos);
-    const allOn = categories.every((cat) => newSet.has(`${cat}:${lvl}`));
-    categories.forEach((cat) => {
-      const key = `${cat}:${lvl}`;
-      if (allOn) newSet.delete(key);
-      else newSet.add(key);
-    });
-    setActiveCombos(newSet);
-    const filtered = prompts.filter((p) => newSet.has(`${p.category}:${p.level}`));
-    setCurrentPrompt(filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : null);
-  };
-
-  const toggleEntireCategory = (cat) => {
-    const newSet = new Set(activeCombos);
-    const allOn = levels.every((lvl) => newSet.has(`${cat}:${lvl}`));
-    levels.forEach((lvl) => {
-      const key = `${cat}:${lvl}`;
-      if (allOn) newSet.delete(key);
-      else newSet.add(key);
-    });
-    setActiveCombos(newSet);
-    const filtered = prompts.filter((p) => newSet.has(`${p.category}:${p.level}`));
-    setCurrentPrompt(filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : null);
+    setShowDefinition(false);
   };
 
   return (
@@ -86,9 +118,6 @@ export default function App() {
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
         boxSizing: "border-box",
         outline: "none",
-        overflow: "hidden",
-        margin: 0,
-        padding: 0,
       }}
     >
       <div
@@ -98,82 +127,38 @@ export default function App() {
           position: "sticky",
           top: 0,
           zIndex: 10,
-          display: "grid",
-          gridTemplateColumns: `repeat(${levels.length + 1}, auto)`,
+          display: "flex",
+          flexWrap: "wrap",
           gap: "0.5rem",
-          alignItems: "center",
-          textAlign: "center",
-          fontWeight: 600,
-          fontSize: "0.875rem",
+          justifyContent: "center",
+          width: "100%",
+          boxSizing: "border-box",
         }}
       >
-        <div></div>
-        {levels.map((lvl) => (
-          <div
-            key={`header-${lvl}`}
+        {LIST_KEYS.map((key) => (
+          <button
+            key={key}
+            style={{
+              padding: "0.45rem 1rem",
+              borderRadius: "0.25rem",
+              border: "1px solid #fff",
+              backgroundColor: activeKey === key ? "#fff" : "#000",
+              color: activeKey === key ? "#000" : "#fff",
+              cursor: "pointer",
+              fontWeight: 600,
+              fontSize: "0.95rem",
+              userSelect: "none",
+              transition: "background-color 0.2s, color 0.2s",
+              fontFamily: "inherit",
+            }}
+            aria-pressed={activeKey === key}
             onClick={(e) => {
               e.stopPropagation();
-              toggleEntireLevel(lvl);
-            }}
-            style={{
-              cursor: "pointer",
-              color: "#ccc",
-              padding: "0.25rem 0.5rem",
+              setActiveKey(key);
             }}
           >
-            Level {lvl}
-          </div>
-        ))}
-        {categories.map((cat) => (
-          <React.Fragment key={cat}>
-            <div
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleEntireCategory(cat);
-              }}
-              style={{
-                fontWeight: "700",
-                textTransform: "capitalize",
-                cursor: "pointer",
-                color: "#fff",
-                paddingRight: "0.5rem",
-              }}
-            >
-              {cat}
-            </div>
-            {levels.map((lvl) => {
-              const key = `${cat}:${lvl}`;
-              const active = activeCombos.has(key);
-              const exists = prompts.some((p) => p.category === cat && p.level === lvl);
-              return (
-                <div key={key} style={{ width: "100%", textAlign: "center" }}>
-                  {exists ? (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleCombo(cat, lvl);
-                      }}
-                      style={{
-                        padding: "0.25rem 0.5rem",
-                        borderRadius: "0.25rem",
-                        border: "1px solid #444",
-                        backgroundColor: active ? "#ffffff" : "#000000",
-                        color: active ? "#000000" : "#ffffff",
-                        cursor: "pointer",
-                        fontSize: "0.875rem",
-                        userSelect: "none",
-                        fontFamily: "inherit",
-                      }}
-                    >
-                      {active ? "✓" : "✕"}
-                    </button>
-                  ) : (
-                    <div style={{ height: "2rem" }}></div>
-                  )}
-                </div>
-              );
-            })}
-          </React.Fragment>
+            {key === TITLE_KEY ? "Title" : key}
+          </button>
         ))}
       </div>
 
@@ -191,19 +176,105 @@ export default function App() {
       >
         {currentPrompt ? (
           <>
-            <h1
-              style={{
-                fontSize: "2rem",
-                fontWeight: "600",
-                color: "#ffffff",
-                maxWidth: "40rem",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {currentPrompt.text}
-            </h1>
+            <div>
+              <h1
+                style={{
+                  fontSize: "2rem",
+                  fontWeight: "600",
+                  color: "#ffffff",
+                  maxWidth: "40rem",
+                  marginBottom: "0",
+                }}
+              >
+                {currentPrompt.text}
+                {(currentPrompt.definition || currentPrompt.definitions) && (
+                  <span
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowDefinition(!showDefinition);
+                    }}
+                    style={{
+                      fontSize: "1rem",
+                      color: "#cccccc",
+                      cursor: "pointer",
+                      marginLeft: "0.5rem",
+                    }}
+                    title="Show definition"
+                  >
+                    ⓘ
+                  </span>
+                )}
+              </h1>
+
+              <div style={{ minHeight: "1.25rem", marginTop: "0.1rem" }}>
+                {showDefinition && (
+                  <p
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#cccccc",
+                      maxWidth: "32rem",
+                      margin: 0,
+                    }}
+                  >
+                    {currentPrompt.definition ||
+                      (currentPrompt.definitions &&
+                        currentPrompt.definitions.join("; "))}
+                  </p>
+                )}
+              </div>
+
+              {currentPrompt.description && (
+                <p
+                  style={{
+                    marginTop: "0.5rem",
+                    fontSize: "1rem",
+                    fontStyle: "italic",
+                    color: "#aaaaaa",
+                    maxWidth: "34rem",
+                  }}
+                >
+                  {currentPrompt.description}
+                </p>
+              )}
+
+              {currentPrompt.labels && currentPrompt.labels.length > 0 && (
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "0.5rem",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    marginTop: "0.5rem",
+                    marginBottom: "0.25rem",
+                  }}
+                >
+                  {currentPrompt.labels.map((label) => (
+                    <span
+                      key={label}
+                      style={{
+                        background: "#333",
+                        color: "#fff",
+                        borderRadius: "999px",
+                        padding: "0.2em 0.9em",
+                        fontSize: "0.85em",
+                        fontWeight: 600,
+                        letterSpacing: "0.04em",
+                        userSelect: "text",
+                        boxShadow: "0 1px 2px rgba(255,255,255,0.1)",
+                        fontFamily: "inherit",
+                      }}
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <p
               style={{
+                position: "absolute",
+                bottom: "1rem",
                 fontSize: "0.75rem",
                 color: "#888888",
               }}
@@ -213,7 +284,7 @@ export default function App() {
           </>
         ) : (
           <p style={{ color: "#bbbbbb", marginTop: "1.5rem" }}>
-            No prompts available for the selected filters.
+            No prompts available for this category.
           </p>
         )}
       </main>
