@@ -165,7 +165,7 @@ export default function App() {
             fontFamily: "inherit",
           }}
         >
-          🎬 Generate Title
+          🎬 Title
         </button>
       </div>
 
