@@ -1,13 +1,71 @@
 import React, { useState, useEffect, useRef } from "react";
-
 import LISTS from "./lists";
 
 const LIST_KEYS = Object.keys(LISTS);
+
+const TITLE_PATTERNS = [
+  ({ noun }) => `The ${noun}`,
+  ({ noun1, noun2 }) => `The ${noun1} of the ${noun2}`,
+
+  ({ adj, noun }) => `The ${adj} ${noun}`,
+  ({ adj, noun1, noun2 }) => `The ${adj} ${noun1} of the ${noun2}`,
+  ({ noun1, adj, noun2 }) => `The ${noun1} of the ${adj} ${noun2}`,
+  ({ adj, noun, location }) => `The ${adj} ${noun} in the ${location}`,
+  ({ adj, noun, location }) => `The ${adj} ${noun} of ${location}`,
+  ({ adj, noun, genre }) => `A ${genre} of the ${adj} ${noun}`,
+
+  ({ adj1, adj2, noun }) => `The ${adj1} and ${adj2} ${noun}`,
+  ({ adj1, adj2, noun1, noun2 }) => `The ${adj1} ${noun1} of the ${adj2} ${noun2}`,
+  ({ adj1, adj2, noun, location }) => `The ${adj1} and ${adj2} ${noun} of ${location}`,
+
+  ({ noun, location }) => `The ${noun} in the ${location}`,
+  ({ noun, location }) => `The ${noun} of ${location}`,
+  ({ genre, location }) => `A ${genre} in ${location}`,
+
+  ({ noun1, noun2 }) => `${noun1}s and ${noun2}s`,
+  ({ adj, noun1, noun2 }) => `The ${adj} ${noun1}s and ${noun2}s`,
+  ({ adj, noun1, noun2 }) => `${noun1}s and the ${adj} ${noun2}`,
+];
+
+function generateStoryTitle() {
+  const adjectiveList = LISTS["Adjectives"] || [];
+  const nounList = [
+    ...(LISTS["More Nouns"] || []),
+    ...(LISTS["Polysenous"] || []),
+  ];
+  const locationList = LISTS["Locations"] || [];
+  const genreList = LISTS["Genres"] || [];
+
+  const adj = adjectiveList[Math.floor(Math.random() * adjectiveList.length)]?.text || "";
+  const adj1 = adjectiveList[Math.floor(Math.random() * adjectiveList.length)]?.text || "";
+  const adj2 = adjectiveList[Math.floor(Math.random() * adjectiveList.length)]?.text || "";
+
+  const noun = nounList[Math.floor(Math.random() * nounList.length)]?.text || "";
+  const noun1 = nounList[Math.floor(Math.random() * nounList.length)]?.text || "";
+  const noun2 = nounList[Math.floor(Math.random() * nounList.length)]?.text || "";
+
+  const location = locationList[Math.floor(Math.random() * locationList.length)]?.text || "";
+  const genre = genreList[Math.floor(Math.random() * genreList.length)]?.text || "";
+
+  const pattern = TITLE_PATTERNS[Math.floor(Math.random() * TITLE_PATTERNS.length)];
+
+  return pattern({
+    adj,
+    adj1,
+    adj2,
+    noun,
+    noun1,
+    noun2,
+    location,
+    genre,
+  });
+}
 
 export default function App() {
   const [activeKey, setActiveKey] = useState(LIST_KEYS[0]);
   const [currentPrompt, setCurrentPrompt] = useState(null);
   const [showDefinition, setShowDefinition] = useState(false);
+  const [storyTitle, setStoryTitle] = useState(null);
 
   const containerRef = useRef(null);
 
@@ -29,6 +87,11 @@ export default function App() {
   const handleClick = () => {
     setCurrentPrompt(getRandomPrompt());
     setShowDefinition(false);
+  };
+
+  const handleGenerateTitle = (e) => {
+    e.stopPropagation();
+    setStoryTitle(generateStoryTitle());
   };
 
   return (
@@ -92,6 +155,24 @@ export default function App() {
             {key}
           </button>
         ))}
+
+        <button
+          onClick={handleGenerateTitle}
+          style={{
+            padding: "0.45rem 1rem",
+            borderRadius: "0.25rem",
+            border: "1px solid #fff",
+            backgroundColor: "#000",
+            color: "#fff",
+            cursor: "pointer",
+            fontWeight: 600,
+            fontSize: "0.95rem",
+            userSelect: "none",
+            fontFamily: "inherit",
+          }}
+        >
+          Generate Title
+        </button>
       </div>
 
       <main
@@ -106,6 +187,20 @@ export default function App() {
           position: "relative",
         }}
       >
+        {storyTitle && (
+          <h2
+            style={{
+              fontSize: "1.5rem",
+              color: "#fffc",
+              fontStyle: "italic",
+              marginBottom: "2rem",
+              maxWidth: "40rem",
+            }}
+          >
+            {storyTitle}
+          </h2>
+        )}
+
         {currentPrompt ? (
           <>
             <div>
@@ -223,4 +318,3 @@ export default function App() {
     </div>
   );
 }
-
